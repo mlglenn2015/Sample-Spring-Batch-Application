@@ -27,11 +27,11 @@
         </developer>
     </developers>
 
-    <scm>
+    <!--<scm>
         <connection></connection>
-    </scm>
+    </scm>-->
 
-    <ciManagement>
+    <!--<ciManagement>
         <system></system>
         <url>git@github.com:mlglenn2015/Sample-Spring-Batch-Application.git</url>
         <notifiers>
@@ -46,17 +46,25 @@
                 <sendOnWarning>true</sendOnWarning>
             </notifier>
         </notifiers>
-    </ciManagement>
+    </ciManagement>-->
 
-    <distributionManagement>
+    <!--<distributionManagement>
 
-    </distributionManagement>
+    </distributionManagement>-->
 
-    <!--<repositories>
+    <repositories>
         <repository>
-            <id>nexus</id>
-            <name>Nexus public repository</name>
-            <url></url>
+            <id>internal</id>
+            <url>file://C:/Users/mlglenn/.m2/repository</url>
+        </repository>
+        <repository>
+            <id>spring-releases</id>
+            <name>Spring Releases</name>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
+        <repository>
+            <id>codelds</id>
+            <url>https://code.lds.org/nexus/content/groups/main-repo</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -64,21 +72,34 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>-->
-
-    <!--<pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <name>Nexus public plugin repository</name>
-            <url></url>
+        <repository>
+            <id>central</id>
+            <name>Maven Central repository</name>
+            <url>https://repo1.maven.org/maven2</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+        </repository>
+        <repository>
+            <id>repository.jboss.org-public</id>
+            <name>JBoss.org Maven repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-releases</id>
+            <name>Spring Releases</name>
+            <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
-    </pluginRepositories>-->
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
     <!--<licenses>
         <license>
